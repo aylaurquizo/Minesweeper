@@ -146,7 +146,12 @@ class Minesweeper extends World implements WorldConstants {
   // flags the indicated cell
   public void flagCell(int row, int col) {
     Cell clickedCell = grid.get(row).get(col);
-    clickedCell.isFlagged = true;
+    if(clickedCell.isFlagged) {
+      clickedCell.isFlagged = false;
+    }
+    else {
+      clickedCell.isFlagged = true;
+    }
   }
 
   // reveals a cell when clicked
