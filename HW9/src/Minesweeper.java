@@ -143,7 +143,7 @@ class Minesweeper extends World implements WorldConstants {
 
   }
 
-  // flags the indicated cell and if cell is already flagged, undoes it
+  // flags the indicated cell and if cell is already flagged, undoes flag
   public void flagCell(int row, int col) {
     Cell clickedCell = grid.get(row).get(col);
     if(clickedCell.isFlagged) {
