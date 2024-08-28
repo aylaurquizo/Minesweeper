@@ -5,6 +5,7 @@ import java.awt.Color;
 import javalib.worldimages.*;
 import java.util.Random;
 
+
 // represents the constants in the code
 interface WorldConstants {
   int CELL_SIZE = 20;
@@ -599,10 +600,11 @@ class ExamplesMinesweeper {
     // mine
     t.checkExpect(this.cell4.isRevealed, false);
   }
-
+/*
   void testBigBang(Tester t) {
     Minesweeper world = new Minesweeper(30, 16, 80);
     world.bigBang(world.columns * WorldConstants.CELL_SIZE, world.rows * WorldConstants.CELL_SIZE);
   }
+*/
 
 }
