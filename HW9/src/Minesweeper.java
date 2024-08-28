@@ -171,21 +171,22 @@ class Minesweeper extends World implements WorldConstants {
 
   // checks to see if the game is over
   public boolean checkGame(Cell clickedCell) {
+    boolean gameOver = true;
     if (clickedCell.isMine) {
-      return true;
+      return gameOver;
     }
     else {
       for (ArrayList<Cell> row : this.grid) {
         for (Cell cell : row) {
           if (cell.isMine && cell.isRevealed) {
-            return false;
+            gameOver = false;
           }
           if (!cell.isMine && !cell.isRevealed) {
-            return false;
+            gameOver = false;
           }
         }
       }
-      return true;
+      return gameOver;
     }
   }
 
