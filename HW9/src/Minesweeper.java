@@ -158,13 +158,18 @@ class Minesweeper extends World implements WorldConstants {
   // reveals a cell when clicked
   public void revealCell(int row, int col) {
     Cell clickedCell = grid.get(row).get(col);
-    clickedCell.isRevealed = true;
-    if (checkGame(clickedCell)) {
-      this.gameOver = true;
+    if(clickedCell.isFlagged) {
+      clickedCell.isRevealed = false;
     }
     else {
-      if (clickedCell.adjacentMines == 0) {
-        this.flooding(clickedCell.neighbors);
+      clickedCell.isRevealed = true;
+      if (checkGame(clickedCell)) {
+        this.gameOver = true;
+      }
+      else {
+        if (clickedCell.adjacentMines == 0) {
+          this.flooding(clickedCell.neighbors);
+        }
       }
     }
   }
