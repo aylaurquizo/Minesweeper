@@ -18,7 +18,7 @@ How to run:
 
 5. Compile the Java Files
    Compile the .java files in the project by typing in terminal:
-      javac -cp "libs/*" -d bin src/**/*.java
+      javac -cp "libs/**" -d bin src/**/**.java
 
 6. Run the Main Class
    After compilation, run the main class by typing in terminal:
