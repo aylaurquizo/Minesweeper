@@ -17,13 +17,13 @@ How to run:
       cd Minesweeper/HW9
 
 5. Compile the Java Files
-   Compile the .java files in the project by typing in terminal:
-      javac -cp "libs/**" -d bin src/**/**.java
+   Compile the .java files in the project by typing in terminal
+   //     javac -cp "libs/*" -d bin src/**/*.java
 
-6. Run the Main Class
+7. Run the Main Class
    After compilation, run the main class by typing in terminal:
       java -cp "bin:libs/*" Main
 
-7. Run Tests (Optional)
+8. Run Tests (Optional)
    If you would like to see the tests run, you can run them by executing:
       java -cp "bin:libs/*" tester.Main ExamplesMinesweeper
